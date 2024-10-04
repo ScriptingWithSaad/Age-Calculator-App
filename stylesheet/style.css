@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +12,14 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-family: gilroy, monospace;
+
+    /* font style*/
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
 }
 
 
@@ -40,6 +51,7 @@ body {
 /* input-box */
 .input-box {
     margin-top: 3vw;
+
     padding: 1vw;
     border-radius: .5vw;
     background: rgba(255, 255, 255, 0.3);
@@ -83,4 +95,174 @@ button {
     cursor: pointer;
     color: #000;
     background-color: #ffff76;
+}
+
+
+/* result */
+
+#result {
+    font-size: 2.5vw;
+    margin-top: 2vw;
+}
+
+#result span {
+    color: #ffff76;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* General styling */
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    color: #fff;
+    padding: 5vw;
+}
+
+/* Calculator section */
+.calculator {
+    margin: 4vw 0;
+    max-width: 60vw;
+}
+
+.calculator h1 {
+    font-size: 4vw;
+    padding-left: 1vw;
+    border-left: .4vw solid #ffff76;
+}
+
+.calculator h1 span {
+    color: #ffff76;
+}
+
+/* Input box styling */
+.input-box {
+    margin-top: 3vw;
+    padding: 1vw;
+    border-radius: .5vw;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.input-box input {
+    flex: 1;
+    padding: .3vw 2vw;
+    font-size: 1.6vw;
+    margin-right: 3vw;
+    border: 0;
+    outline: 0;
+    border-radius: .4vw;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+/* Button styling */
+button {
+    font-size: 1.3vw;
+    border-radius: 2vw;
+    padding: .8vw 1.5vw;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    background-color: #ffff76;
+}
+
+/* Result section styling */
+#result {
+    font-size: 2.5vw;
+    margin-top: 2vw;
+}
+
+#result span {
+    color: #ffff76;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .calculator h1 {
+        font-size: 6vw;
+    }
+
+    .input-box input {
+        font-size: 2.5vw;
+    }
+
+    button {
+        font-size: 2.5vw;
+        padding: 1vw 2vw;
+    }
+
+    #result {
+        font-size: 3.5vw;
+    }
+
+    #result span {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator h1 {
+        font-size: 8vw;
+    }
+
+    .input-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-box input {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    button {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    #result {
+        font-size: 5vw;
+    }
+
+    #result span {
+        font-size: 6vw;
+    }
 }
